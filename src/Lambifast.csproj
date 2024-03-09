@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Title>Lambifast</Title>
+        <Version>1.0.0</Version>
+        <Authors>Davide</Authors>
+		<IsPackable>true</IsPackable>
+        <Company />
+        <Product />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Amazon.Lambda.AspNetCoreServer.Hosting" Version="1.7.0" />
+        <PackageReference Include="AutoMapper" Version="13.0.1" />
+        <PackageReference Include="FluentValidation" Version="11.9.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="AWS.Lambda.Powertools.Logging" Version="1.5.0" />
+        <PackageReference Include="AWS.Lambda.Powertools.Tracing" Version="1.4.0" />
+    </ItemGroup>
+
+</Project>
