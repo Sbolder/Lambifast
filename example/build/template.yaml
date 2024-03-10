@@ -1,0 +1,58 @@
+#file: noinspection YAMLSchemaValidation
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Parameters:
+
+  Environment:
+    Type: String
+    Description: Environment
+
+Globals:
+  Function:
+    Tracing: Active
+    Architectures:
+      - x86_64
+
+Resources:
+  ApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: !Ref Environment
+      TracingEnabled: true
+      Cors:
+        AllowOrigin: "*"
+        AllowHeaders: "*"
+        AllowMethods: "*"
+        AllowCredentials: true
+
+
+  LambifastSample:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: ProductServiceLambda
+      Handler: Lambifast.Sample
+      CodeUri: ../Lambifast.Sample
+      Runtime: dotnet8
+      MemorySize: 2048
+      Timeout: 30
+      AutoPublishAlias: live
+      Events:
+        RoutingGet:
+          Type: Api
+          Properties:
+            RestApiId: !Ref ApiGateway
+            Path: /api/{any+}
+            Method: ANY
+        RoutingOptions:
+          Type: Api
+          Properties:
+            RestApiId: !Ref ApiGateway
+            Path: /api/{any+}
+            Method: OPTIONS
+
+Outputs:
+  Endpoint:
+    Description: API Gateway Endpoint
+    Value:
+      Fn::Sub: https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/${Environment}/
