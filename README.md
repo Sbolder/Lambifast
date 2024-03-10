@@ -57,7 +57,15 @@ Edit your Controller:
 
 ### Example
 
-TODO
+Find simple example in example folder on github repo: https://github.com/Sbolder/Lambifast/tree/main/example
+
+https://github.com/Sbolder/Lambifast/tree/main/example/build contain a sam template for test sample on your aws account.
+buildRelease.ps1 script build and deploy the sample on your aws account, and print che url avaialable for test.
+!!! you need to create a s3 bucket and replace the name in templae.yaml !!! s3 bucket are global unique.
+
+Logging and traicing are automatically avaialable on cloudWatch console, no action need.
+
+
 
 ### License
 
