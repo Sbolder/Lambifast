@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambifast.Sample", "AwsLambda.Sample\Lambifast.Sample.csproj", "{9341C04B-673B-423C-A51A-DFD45BCF998D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9FA372CF-B9CE-4714-8213-47630B00BEC6}"
 	ProjectSection(SolutionItems) = preProject
 		build\buildRelease.ps1 = build\buildRelease.ps1
@@ -12,15 +10,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9FA372CF
 		build\template.yaml = build\template.yaml
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambifast.Sample", "Lambifast.Sample\Lambifast.Sample.csproj", "{E058FEDB-8404-4D64-9CF8-33DDF6962F3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambifast", "..\src\Lambifast.csproj", "{2D6AADA0-F8BB-4EBE-94FD-5EEC839CEADB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9341C04B-673B-423C-A51A-DFD45BCF998D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9341C04B-673B-423C-A51A-DFD45BCF998D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9341C04B-673B-423C-A51A-DFD45BCF998D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E058FEDB-8404-4D64-9CF8-33DDF6962F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E058FEDB-8404-4D64-9CF8-33DDF6962F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E058FEDB-8404-4D64-9CF8-33DDF6962F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E058FEDB-8404-4D64-9CF8-33DDF6962F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6AADA0-F8BB-4EBE-94FD-5EEC839CEADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6AADA0-F8BB-4EBE-94FD-5EEC839CEADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6AADA0-F8BB-4EBE-94FD-5EEC839CEADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6AADA0-F8BB-4EBE-94FD-5EEC839CEADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

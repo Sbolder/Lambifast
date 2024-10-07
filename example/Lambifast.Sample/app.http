@@ -1,0 +1,11 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@Lambifast_HostAddress = https://localhost:7250
+
+GET {{Lambifast_HostAddress}}/api/books
+Accept: application/json
+Content-Type: application/json
+Accept-Language: it
+
+
+
+###
