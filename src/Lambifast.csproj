@@ -15,6 +15,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Lambifast.Localization\**" />
+      <Content Remove="Lambifast.Localization\**" />
+      <EmbeddedResource Remove="Lambifast.Localization\**" />
+      <None Remove="Lambifast.Localization\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Amazon.Lambda.AspNetCoreServer.Hosting" Version="1.7.0" />
         <PackageReference Include="AutoMapper" Version="13.0.1" />
         <PackageReference Include="FluentValidation" Version="11.9.0" />

@@ -94,9 +94,11 @@ public abstract class BaseProgram<T>
         #endregion
 
         InnerConfigureServices(services, configuration);
+
     }
 
     protected abstract void InnerConfigureServices(IServiceCollection services, IConfiguration configuration);
+    protected abstract void InnerConfigure(WebApplication app);
 
     private void ConfigureLogging(ILoggingBuilder logging)
     {
@@ -127,6 +129,7 @@ public abstract class BaseProgram<T>
 
         #endregion
         
+        InnerConfigure(app);
         app.MapControllers();
     }
 }
